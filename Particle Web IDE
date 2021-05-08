@@ -1,0 +1,50 @@
+int redLed = D6;
+int yellowLed = D4;
+int greenLed = D5;
+
+
+void setup()
+{
+   pinMode(yellowLed, OUTPUT);
+   pinMode(greenLed, OUTPUT);
+   pinMode(redLed, OUTPUT);
+   Particle.function("ledlight",ledlight);
+}
+
+
+bool ledlight(String ledlight) 
+{
+    
+    //bool status = false;
+    
+    if (ledlight == "Red") 
+    {
+        digitalWrite(redLed, HIGH);
+        digitalWrite(yellowLed, LOW);
+        digitalWrite(greenLed, LOW);
+        return 1;
+        //status = true;
+    }
+    else if (ledlight =="Yellow") 
+    {
+        
+        digitalWrite(redLed, LOW);
+        digitalWrite(yellowLed, HIGH);
+        digitalWrite(greenLed, LOW);
+        return 1;
+        //status = true;
+    }
+    else if (ledlight == "Green") 
+    {
+        
+        digitalWrite(redLed, LOW);
+        digitalWrite(yellowLed, LOW);
+        digitalWrite(greenLed, HIGH);        
+        return 1;
+        //status = true;
+    }
+    else{
+        return -1;
+    }
+        
+}
