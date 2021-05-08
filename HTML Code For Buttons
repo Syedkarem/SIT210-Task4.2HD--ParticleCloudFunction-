@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+  <body style="background-color:white;">
+
+
+  <br>
+  <br>
+  <form action="https://api.particle.io/v1/devices/e00fce685cfcb31b770d5369/ledlight?access_token=33834fb0f2eb9f9727b502e6d44c8381b82397e5" method="POST">
+    <h1>Choose any led that you want to turn on:</h1> <br>
+    <br>
+    <input type="radio" name="signals" value="Red">press to turn Red LED on.
+    <br>
+    <input type="radio" name="signals" value="Yellow">press to turn Yellow LED on.
+    <br>
+    <input type="radio" name="signals" value="Green">press to turn Green LED on.
+    <br>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  </body>
+</html>
